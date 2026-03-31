@@ -1,0 +1,36 @@
+/* NoteForm.css */
+.note-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* spacing between inputs */
+  margin: 1rem 0;
+}
+
+.note-form input,
+.note-form textarea {
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.note-form textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.submit-note-btn {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-note-btn:hover {
+  background-color: #0056b3;
+}

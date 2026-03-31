@@ -1,0 +1,178 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* 🔥 BACKGROUND */
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background:
+    radial-gradient(circle at 25% 20%, #7c3aed, transparent 40%),
+    radial-gradient(circle at 75% 80%, #9333ea, transparent 40%),
+    #020617;
+}
+
+/* 🔥 CARD */
+.login-card {
+  background: linear-gradient(145deg, #111827, #1f2937);
+  padding: 45px 35px;
+  border-radius: 18px;
+  width: 380px;
+
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.8),
+    0 0 35px rgba(124, 58, 237, 0.25);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 🔥 TEXT */
+.login-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #f8fafc;
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.login-subtitle {
+  color: #a1a1aa;
+  text-align: center;
+  margin-bottom: 26px;
+  font-size: 14px;
+}
+
+/* 🔥 INPUT GROUP */
+.input-group {
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 18px;
+}
+
+/* 🔥 INPUT */
+.login-input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #27272a;
+  background: #18181b;
+  color: #e4e4e7;
+  transition: all 0.25s ease;
+  box-sizing: border-box;
+}
+
+.login-input:hover {
+  border-color: #3f3f46;
+}
+
+.login-input:focus {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.25);
+  outline: none;
+}
+
+/* 🔥 PASSWORD WRAPPER */
+.password-wrapper {
+  position: relative;
+}
+
+/* 🔥 TOGGLE PASSWORD */
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 13px;
+  color: #94a3b8;
+  user-select: none;
+}
+
+.toggle-password:hover {
+  color: #e2e8f0;
+}
+
+/* 🔥 ERROR MESSAGE */
+.login-error {
+  color: #f87171;
+  font-size: 13px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+/* 🔥 BUTTONS (Login/Register/Guest) */
+.login-button,
+.guest-button {
+  width: 100%;
+  max-width: 300px;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-sizing: border-box;
+  margin-top: 10px;
+  display: block;
+  text-align: center;
+}
+
+/* Login/Register button style */
+.login-button {
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+  color: #fff;
+}
+
+.login-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(139, 92, 246, 0.35);
+}
+
+.login-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Guest button style */
+.guest-button {
+  background-color: #f3f4f6;
+  color: #333;
+  border: 1px solid #ccc;
+  font-style: italic;
+  width: 45%;
+}
+
+.guest-button:hover {
+  background-color: #e5e7eb;
+  border-color: #888;
+  transform: translateY(-1px);
+}
+
+/* 🔥 TOGGLE LOGIN / REGISTER */
+.login-toggle {
+  margin-top: 18px;
+  font-size: 14px;
+  color: #a1a1aa;
+  text-align: center;
+  cursor: pointer;
+  max-width: 300px;
+}
+
+.login-toggle span {
+  color: #c4b5fd;
+  font-weight: 500;
+}
+
+.login-toggle span:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,249 @@
+/* ===========================
+   GENERAL PAGE STYLING
+=========================== */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #ffffff;
+  color: #111;
+}
+
+/* ===========================
+   DARK MODE
+=========================== */
+body.dark {
+  background-color: #0f1117;
+  color: #e4e4e7;
+}
+
+/* ===========================
+   APP CONTAINER
+=========================== */
+.App {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centers everything */
+}
+
+/* ===========================
+   USER HEADER
+=========================== */
+.user-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.user-header button {
+  padding: 8px 16px;
+  border-radius: 10px;
+  border: none;
+  background: #7c3aed;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 10px 16px;
+
+  background: #f3f4f6;
+  border-radius: 12px;
+}
+
+body.dark .navbar {
+  background: #111827;
+  color: #e4e4e7;
+}
+
+.navbar .dark-toggle {
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: #7c3aed;
+  color: #fff;
+}
+
+/* ===========================
+   ADD NOTE BUTTON
+=========================== */
+.add-note-btn {
+  width: 220px;
+  margin-bottom: 20px;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+
+  background: #7c3aed;
+  color: #fff;
+}
+
+/* ===========================
+   SEARCH
+=========================== */
+.search-container {
+  width: 260px;
+  margin-bottom: 20px;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+/* ===========================
+   NOTE FORM (FIXED)
+=========================== */
+.note-form {
+  width: 320px;
+  max-width: 90%;
+
+  margin: 20px 0; /* ✅ FIXED */
+
+  padding: 16px;
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  background: #f9fafb;
+}
+
+body.dark .note-form {
+  background: #1f1f2b;
+}
+
+.note-form input,
+.note-form textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+body.dark .note-form input,
+body.dark .note-form textarea {
+  background: #111;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+.note-form button {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #7c3aed;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ===========================
+   NOTES LIST
+=========================== */
+.note-list {
+  width: 100%;
+  max-width: 600px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ===========================
+   NOTE CARD
+=========================== */
+.note-card {
+  padding: 16px;
+  border-radius: 12px;
+  background: #f3f4f6;
+}
+
+body.dark .note-card {
+  background: #1f1f2b;
+}
+
+.note-actions {
+  margin-top: 10px;
+
+  display: flex;
+  justify-content: flex-end; /* 🔥 pushes buttons to right */
+  gap: 10px;
+}
+
+/* EDIT BUTTON (violet) */
+.note-actions button:first-child {
+  background: #7c3aed;   /* violet */
+  color: white;
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+/* DELETE BUTTON (white) */
+.note-actions button:last-child {
+  background: white;
+  color: #111;
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background: #7c3aed;
+  color: white;
+}
+
+.delete-btn {
+  background: white;
+  color: black;
+  border: 1px solid #ccc;
+}
+
+body.dark .delete-btn {
+  background: #111;
+  color: white;
+  border: 1px solid #444;
+}
+
+/* DARK MODE FIX */
+body.dark .note-actions button:last-child {
+  background: #111;
+  color: white;
+  border: 1px solid #444;
+}
+
+.admin-panel {
+  width: 30%;
+  max-width: 600px;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 15px;
+
+  border-radius: 12px;
+  background: #f3f4f6;
+}
+
+body.dark .admin-panel {
+  background: #1f1f2b;
+}
