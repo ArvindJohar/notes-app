@@ -32,7 +32,6 @@ function Login({ setUser }) {
         setUsername("");
         setPassword("");
       } else {
-        // Store user info in localStorage
         localStorage.setItem("user", JSON.stringify(res.data));
         setUser(res.data);
       }
@@ -59,7 +58,6 @@ function Login({ setUser }) {
         <h2 className="login-title">{isRegister ? "Create account" : "Welcome back"}</h2>
         <p className="login-subtitle">{isRegister ? "Sign up to get started" : "Sign in to your workspace"}</p>
 
-        {/* Username */}
         <div className="input-group">
           <input
             className="login-input"
@@ -70,7 +68,6 @@ function Login({ setUser }) {
           />
         </div>
 
-        {/* Password */}
         <div className="input-group password-wrapper">
           <input
             className="login-input"
@@ -87,10 +84,8 @@ function Login({ setUser }) {
           </span>
         </div>
 
-        {/* Error message */}
         {error && <p className="login-error">{error}</p>}
 
-        {/* Login / Register button */}
         <button
           className="login-button"
           onClick={handleSubmit}
@@ -99,14 +94,12 @@ function Login({ setUser }) {
           {loading ? "Please wait..." : isRegister ? "Register" : "Login"}
         </button>
 
-        {/* Guest login */}
         {!isRegister && (
           <button className="guest-button" onClick={handleGuest}>
             Continue as Guest
           </button>
         )}
 
-        {/* Toggle Login/Register */}
         <p
           className="login-toggle"
           onClick={() => { setIsRegister(!isRegister); setError(""); setUsername(""); setPassword(""); }}

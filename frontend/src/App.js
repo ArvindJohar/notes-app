@@ -47,7 +47,6 @@ function App() {
     localStorage.setItem("darkMode", JSON.stringify(darkMode));
   }, [darkMode]);
 
-  // 🚪 LOGOUT
   const handleLogout = async () => {
     try {
       await axios.get("/api/auth/logout");
@@ -58,7 +57,6 @@ function App() {
     }
   };
 
-  // ➕ ADD / EDIT
   const addNote = async () => {
     if (user.role === "guest") {
       alert("Guests cannot add notes. Please login.");
@@ -88,7 +86,6 @@ function App() {
     }
   };
 
-  // 🗑️ DELETE (Admin OR Author)
   const deleteNote = async (note) => {
   if (user.role !== "admin" && user.username !== note.author) {
     alert("Only admin or the author can delete this note");
@@ -100,7 +97,7 @@ function App() {
 
   try {
     await axios.delete(`/api/notes/${note._id}`, {
-      withCredentials: true   // 🔥 THIS FIXES YOUR ISSUE
+      withCredentials: true  
     });
 
     setNotes(notes.filter((n) => n._id !== note._id));
@@ -110,7 +107,6 @@ function App() {
   }
 };
 
-  // ✏️ EDIT
   const updateNote = (note) => {
     if (user.role === "guest") {
       alert("Login required to edit notes");

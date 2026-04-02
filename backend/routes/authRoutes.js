@@ -3,7 +3,6 @@ const router = express.Router();
 
 const { register, login, logout } = require("../controllers/authController");
 
-// 🔐 AUTH ROUTES
 router.post("/register", register);
 router.post("/login", login);
 router.get("/logout", logout);

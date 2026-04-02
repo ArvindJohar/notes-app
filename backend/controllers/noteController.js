@@ -1,6 +1,5 @@
 const Note = require("../models/Note");
 
-// GET all notes
 const getNotes = async (req, res) => {
   try {
     const notes = await Note.find().sort({ createdAt: -1 });
@@ -11,7 +10,6 @@ const getNotes = async (req, res) => {
   }
 };
 
-// CREATE note
 const createNote = async (req, res) => {
   try {
     const user = req.session.user;
@@ -35,7 +33,6 @@ const createNote = async (req, res) => {
   }
 };
 
-// UPDATE note
 const updateNote = async (req, res) => {
   try {
     const user = req.session.user;
@@ -59,10 +56,9 @@ const updateNote = async (req, res) => {
   }
 };
 
-// DELETE note (admin OR author)
 const deleteNote = async (req, res) => {
   try {
-    console.log("SESSION USER:", req.session.user); // debug
+    console.log("SESSION USER:", req.session.user); 
 
     const note = await Note.findById(req.params.id);
     if (!note) return res.status(404).json({ error: "Note not found" });

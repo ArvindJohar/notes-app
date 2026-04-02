@@ -1,12 +1,10 @@
 const User = require("../models/User");
 const bcrypt = require("bcryptjs");
 
-// 🔐 REGISTER
 exports.register = async (req, res) => {
   try {
     const { username, password } = req.body;
 
-    // check if user already exists
     const existingUser = await User.findOne({ username });
     if (existingUser) {
       return res.status(400).json({ error: "User already exists" });
@@ -17,7 +15,7 @@ exports.register = async (req, res) => {
     const user = new User({
       username,
       password: hashed,
-      role: "user" // 👈 default role
+      role: "user"
     });
 
     await user.save();
@@ -28,7 +26,6 @@ exports.register = async (req, res) => {
   }
 };
 
-// 🔐 LOGIN
 exports.login = async (req, res) => {
   try {
     const { username, password } = req.body;
@@ -45,7 +42,7 @@ exports.login = async (req, res) => {
 
     req.session.user = {
       id: user._id,
-      username: user.username, // 👈 add this
+      username: user.username, 
       role: user.role
     };
 
@@ -55,7 +52,6 @@ exports.login = async (req, res) => {
   }
 };
 
-// 🔐 LOGOUT
 exports.logout = (req, res) => {
   req.session.destroy(() => {
     res.json({ message: "Logged out" });
